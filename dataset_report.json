@@ -1,0 +1,10 @@
+{
+  "npz_path": "/kaggle/input/datasets/nkishidjengagdon/d6-heat-transfer-phenomena/HeatTransferPhenomena_35_58.npz",
+  "train_samples": 30912,
+  "validation_samples": 6624,
+  "test_samples": 6624,
+  "input_channels": 2,
+  "output_channels": 1,
+  "height": 64,
+  "width": 64
+}

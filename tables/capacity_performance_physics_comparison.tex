@@ -1,0 +1,20 @@
+\begin{tabular}{lllrrrrrrrrrrrrrrrr}
+\toprule
+model & base_model & experiment_group & physics_lambda & seed & n_parameters & model_size_mb & used_data_parallel & RMSE_norm & RelL2_norm & RMSE_phys & RelL2_phys & laplacian_pred_mse_masked & laplacian_error_mse_masked & interior_MAE_phys & boundary_MAE_phys & boundary_over_interior_MAE & latency_ms_per_sample_b1 & throughput_samples_per_s_b64 \\
+\midrule
+UNetSmall & UNetSmall & main & NaN & 42 & 1928129 & 7.35523 & False & 0.00216232 & 0.0067672 & 0.00216228 & 0.0067672 & 0.0440694 & 3.50319e-05 & 0.00117439 & 0.000545159 & 0.464204 & 2.27319 & 2510.75 \\
+DilatedCNN & DilatedCNN & main & NaN & 42 & 371969 & 1.41895 & False & 0.0023488 & 0.0073508 & 0.00234875 & 0.0073508 & 0.0441243 & 2.8858e-05 & 0.00143723 & 0.000634255 & 0.441303 & 1.65433 & 860.327 \\
+MLP & MLP & main & NaN & 42 & 13637632 & 52.0234 & False & 0.0235883 & 0.0738219 & 0.0235879 & 0.0738219 & 0.038563 & 0.00286429 & 0.0108034 & 1.46361e-05 & 0.00135477 & 0.252285 & 72790.1 \\
+PooledRidge & ClosedFormRandomFeatures & eqelm_fast_baseline & NaN & 42 & 2101248 & 8.01562 & False & 0.0330068 & 0.103298 & 0.0330062 & 0.103298 & 0.0344389 & 0.00987151 & 0.0137084 & 0 & 0 & 0.0853333 & 334804 \\
+GridGCN_PhysicsLoss_lambda_1em05 & GridGCN_PhysicsLoss & physics_lambda_ablation & 1e-05 & 42 & 68993 & 0.263187 & False & 0.0352295 & 0.110254 & 0.0352289 & 0.110254 & 0.0442055 & 0.00143974 & 0.0135947 & 0.000421318 & 0.0309914 & 3.43501 & 943.707 \\
+GridGCN_PhysicsLoss_lambda_1em03 & GridGCN_PhysicsLoss & physics_lambda_ablation & 0.001 & 42 & 68993 & 0.263187 & False & 0.0353467 & 0.110621 & 0.035346 & 0.110621 & 0.0427135 & 0.00144677 & 0.0137851 & 0.000620146 & 0.0449866 & 3.2546 & 942.005 \\
+GridGCN_PhysicsLoss_lambda_0 & GridGCN_PhysicsLoss & physics_lambda_ablation_reused & 0 & 42 & 68993 & 0.263187 & False & 0.0358789 & 0.112287 & 0.0358783 & 0.112287 & 0.0455763 & 0.0018424 & 0.0142211 & 0.000602394 & 0.0423593 & 3.25314 & 949.805 \\
+GridGCN & GridGCN & main & NaN & 42 & 68993 & 0.263187 & False & 0.0358789 & 0.112287 & 0.0358783 & 0.112287 & 0.0455763 & 0.0018424 & 0.0142211 & 0.000602394 & 0.0423593 & 3.25314 & 949.805 \\
+GridGCN_PhysicsLoss_lambda_1em04 & GridGCN_PhysicsLoss & physics_lambda_ablation_reused & 0.0001 & 42 & 68993 & 0.263187 & False & 0.0359719 & 0.112578 & 0.0359712 & 0.112578 & 0.045932 & 0.00198519 & 0.0143761 & 0.000722404 & 0.0502504 & 3.24845 & 943.078 \\
+GridGCN_PhysicsLoss & GridGCN_PhysicsLoss & main & 0.0001 & 42 & 68993 & 0.263187 & False & 0.0359719 & 0.112578 & 0.0359712 & 0.112578 & 0.045932 & 0.00198519 & 0.0143761 & 0.000722404 & 0.0502504 & 3.24845 & 943.078 \\
+GridGCN_PhysicsLoss_lambda_1em02 & GridGCN_PhysicsLoss & physics_lambda_ablation & 0.01 & 42 & 68993 & 0.263187 & False & 0.0367044 & 0.11487 & 0.0367037 & 0.11487 & 0.0292836 & 0.00403972 & 0.0172279 & 0.00211219 & 0.122603 & 3.42415 & 951.384 \\
+MeanBaseline & MeanBaseline & main & NaN & 42 & 0 & 0 & False & 0.2146 & 0.671612 & 0.214596 & 0.671612 & 0.000354763 & 0.0434829 & 0.151455 & 0 & 0 & 0.0102713 & 97358.2 \\
+PooledELM & ClosedFormRandomFeatures & eqelm_fast_baseline & NaN & 42 & 1184000 & 4.5166 & False & 0.288244 & 0.902087 & 0.288238 & 0.902087 & 0.159998 & 0.161793 & 0.170727 & 0 & 0 & 0.151017 & 403209 \\
+Pooled_eQELM & ClosedFormRandomFeatures & eqelm_fast_baseline & NaN & 42 & 4329728 & 16.5166 & False & 8.35252 & 26.1401 & 8.35237 & 26.1401 & 616.388 & 616.316 & 4.35676 & 0 & 0 & 0.240747 & 159344 \\
+\bottomrule
+\end{tabular}
